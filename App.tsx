@@ -10,23 +10,25 @@
 
 import React from 'react';
 import {
-  SafeAreaView,
-  Text,
-  StatusBar,
+    SafeAreaView,
+    Text,
+    StatusBar,
 } from 'react-native';
 
 
-declare const global: {HermesInternal: null | {}};
 
 const App = () => {
-  return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <Text>Ricky and morty ;) !</Text>
-     </SafeAreaView>
-    </>
-  );
+    return (
+        <>
+            <StatusBar barStyle="dark-content" />
+            <SafeAreaView>
+                <Text>Ricky and morty ;) !</Text>
+            </SafeAreaView>
+        </>
+
+
+
+    );
 };
 
 
