@@ -7,5 +7,6 @@ type CharctersScreenNavigationProp = StackNavigationProp<
 >
 
 
-export type ICharactersProps {
+export interface ICharactersProps {
   naviagtion:CharctersScreenNavigationProp
+}
