@@ -1,10 +1,10 @@
 import { InMemoryCache } from '@apollo/client';
-import { IChractersResult, IExistingState, IQueryChractersResponse } from '../GraphQl.interface';
+import { ICharactersResult, IExistingState, IQueryCharactersResponse } from '../GraphQl.interface';
 import { mergeNewData } from './helperFunctions';
 
 const initalState: IExistingState = { results: [], ids: [] };
 export const rickyCache = new InMemoryCache({
-    dataIdFromObject: (object: IChractersResult) => {
+    dataIdFromObject: (object: ICharactersResult) => {
         object;
     },
     typePolicies: {
@@ -12,7 +12,7 @@ export const rickyCache = new InMemoryCache({
             fields: {
                 characters: {
                     keyArgs: ['filter'],
-                    merge(existing = initalState, incoming: IQueryChractersResponse) {
+                    merge(existing = initalState, incoming: IQueryCharactersResponse) {
                         const mergedData :IExistingState = mergeNewData(existing, incoming);
                         return mergedData;
                     },
