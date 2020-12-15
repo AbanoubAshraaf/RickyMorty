@@ -14,3 +14,20 @@ export const charactersGql = gql`
     }
   }
 `;
+
+export const characterDetailsGql = gql`
+  query character($id: ID!) {
+    character(id: $id) {
+      id
+      name
+      image
+      species
+      gender
+      episode {
+        id
+        name
+        air_date
+      }
+    }
+  }
+`;
