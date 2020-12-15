@@ -12,6 +12,9 @@
     "format": "prettier --write \"./**/*.{ts,tsx,js,json,md}\""
   },
   "dependencies": {
+    "@apollo/client": "^3.3.6",
+    "graphql": "^15.4.0",
+    "lodash.debounce": "^4.0.8",
     "react": "16.13.1",
     "react-native": "0.63.3"
   },
