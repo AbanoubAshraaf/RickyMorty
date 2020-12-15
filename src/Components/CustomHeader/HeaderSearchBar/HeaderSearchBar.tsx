@@ -14,7 +14,7 @@ export const HeaderSearchBar = ({
   const [searchValue, setSearchValue] = useState('');
 
   const debouncedOnChange = debounce(onChaneName, 500);
-  if (!searchableHeader) {
+  if (!searchableHeader || !onChaneName) {
     return null;
   }
   return (
@@ -22,7 +22,7 @@ export const HeaderSearchBar = ({
       <TextInput
         style={styles.textInput}
         placeholder="Search"
-        placeholderTextColor={colors.grey0}
+        placeholderTextColor={colors.mainTextForegroundColor}
         onChangeText={(text) => {
           setSearchValue(text);
           debouncedOnChange(text);

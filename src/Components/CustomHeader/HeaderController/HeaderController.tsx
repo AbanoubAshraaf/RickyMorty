@@ -23,6 +23,7 @@ export const HeaderController = ({
         onPress={() => {
           navigation.goBack();
         }}
+        containerStyle={{ transform: [{ rotate: '180deg' }]}  }
       />
       <Text style={[styles.title, titleStyle]}>{title}</Text>
       <RickyIcon
@@ -31,6 +32,8 @@ export const HeaderController = ({
         onPress={() => {
           setSearchableHeader(!searchableHeader);
         }}
+        containerStyle={{ transform: [{ rotate: '90deg' }]}  }
+
       />
     </View>
   );

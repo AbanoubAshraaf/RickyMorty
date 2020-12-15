@@ -4,10 +4,9 @@ import { RootStackParamList } from '../../Navigator/MainStackNavigator';
 
 export interface ICustomHeaderProps {
   title: string;
-  titleStyle: TextStyle;
-  backIcon: boolean;
-  searchIcon: true;
-  navigation: StackNavigationProp<RootStackParamList>;
-  onChaneName: (text: string) => void;
-  name: string;
+  titleStyle?: TextStyle;
+  backIcon?: boolean;
+  searchIcon?: true;
+  navigation?: StackNavigationProp<RootStackParamList>;
+  onChaneName?: (text: string) => void;
 }
