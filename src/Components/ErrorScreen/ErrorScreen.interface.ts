@@ -1,3 +1,3 @@
 export interface IErrorScreenProps {
-    error:boolean
+  error: boolean;
 }

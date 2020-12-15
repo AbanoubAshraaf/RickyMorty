@@ -7,7 +7,7 @@ export const colors = {
   grey3: '#c5c5c5',
   grey6: '#a7a7a7',
   grey9: '#8a8a8a',
-  grey12: '#6c6c6c', 
+  grey12: '#6c6c6c',
   transparentBackground: '#00000022',
   red: '#ff3838',
 };

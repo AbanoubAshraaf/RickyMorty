@@ -1,8 +1,6 @@
-
 import { StyleSheet } from 'react-native';
 import { colors } from '../../appStyles';
 const styles = StyleSheet.create({
-
   loaderContainer: {
     marginVertical: 10,
     paddingVertical: 10,
@@ -19,7 +17,6 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     alignSelf: 'center',
   },
-
 });
 
 export default styles;

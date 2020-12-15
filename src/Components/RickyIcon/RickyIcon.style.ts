@@ -8,9 +8,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   iconStyle: {
-     marginHorizontal: 8,
-      marginVertical: 8,
-       transform: [{ rotate: '90deg' }] 
-      },
+    marginHorizontal: 8,
+    marginVertical: 8,
+  },
 });
 export default styles;

@@ -1,3 +1,3 @@
 export interface IActivityIndicator {
-    loading:boolean
+  loading: boolean;
 }

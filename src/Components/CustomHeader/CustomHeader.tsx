@@ -13,7 +13,7 @@ export const CustomHeader = ({
   navigation,
   title,
   searchIcon,
-  onChaneName=()=>{},
+  onChaneName = () => {},
 }: ICustomHeaderProps) => {
   const [animatedValue, setAnimatedValue] = useState(new Animated.Value(0));
   const [searchableHeader, setSearchableHeader] = useState(false);
