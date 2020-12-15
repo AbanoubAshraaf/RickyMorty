@@ -9,5 +9,5 @@ export interface ICharactersProps {
 }
 
 export interface IRickyMortyCharacterProps extends ICharactersResult {
-  onCharacterPress?:(item:ICharactersResult)=>void
+  onCharacterPress?: (item: ICharactersResult) => void;
 }
