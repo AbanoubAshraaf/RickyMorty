@@ -11,7 +11,7 @@
     "lint:fix": "eslint . --ext .js,.ts,.tsx --fix",
     "format": "prettier --write \"./**/*.{ts,tsx,js,json,md}\"",
     "check:format": "prettier --list-different \"./**/*.{ts,tsx,js,json,md}\"",
-    "pre-push": "yarn check:format"
+    "pre-push": "yarn format"
 
 
   },
