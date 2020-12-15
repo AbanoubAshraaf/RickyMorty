@@ -5,13 +5,15 @@ import { charactersGql } from '../../graphql';
 import { CustomHeader } from '../../Components/CustomHeader';
 import { colors } from '../../appStyles';
 import withRenderCharacter from './hoc/withRenderCharacter';
-import { ICharactersProps } from './Characters.interface';
+import { ICharactersProps, IRickyMortyCharacterProps } from './Characters.interface';
+import { ICharactersResult } from '../../graphql/GraphQl.interface';
+import withFooter from '../../hoc/withFooter';
 
 const singlePageLength = 20;
 
-const Characters = ({naviagtion}:ICharactersProps) => {
+const Characters = ({navigation}:ICharactersProps) => {
   const [name, setName] = useState('');
-  const { data, fetchMore, refetch } = useQuery(charactersGql, {
+  const { data, fetchMore, refetch ,error} = useQuery(charactersGql, {
     variables: {
       page: 1,
       name: name,
@@ -19,12 +21,12 @@ const Characters = ({naviagtion}:ICharactersProps) => {
     fetchPolicy: 'cache-and-network',
   });
 
-  const results = data && data.characters && data.characters.results;
-  const resultsLength = results && results.length;
-  const count = data && data.characters && data.characters.info && data.characters.info.count;
-
+  const results :ICharactersResult[] = data && data.characters && data.characters.results;
+  const resultsLength :number= results && results.length;
+  const count:number = data && data.characters && data.characters.info && data.characters.info.count;
+  const moreExist=resultsLength&&resultsLength<count
   const loadMoreCharacters = () => {
-    if (resultsLength < count) {
+    if (moreExist) {
       fetchMore({
         variables: {
           page: resultsLength / singlePageLength + 1,
@@ -33,6 +35,17 @@ const Characters = ({naviagtion}:ICharactersProps) => {
       });
     }
   };
+
+  const onCharacterPress=({name,id,image}:IRickyMortyCharacterProps)=>{
+    navigation.navigate('characterDetails', {
+      id,
+      name,
+      image
+    });
+
+  }
+
+  
 
   const onChangeName = (text: string) => {
     // refetch({page: 1,name: text }).then(()=>setName(text));
@@ -46,17 +59,18 @@ const Characters = ({naviagtion}:ICharactersProps) => {
         setName={setName}
         onChaneName={onChangeName}
       />
-      {results && (
         <FlatList
-          data={results}
-          renderItem={withRenderCharacter()}
+          data={results ||[]}
+          renderItem={withRenderCharacter(onCharacterPress)}
           style={{ backgroundColor: colors.mainThemeBackgroundColor }}
           keyExtractor={(item, index) => index.toString()}
           onEndReachedThreshold={0.5}
           onEndReached={() => loadMoreCharacters()}
           onTouchStart={() => Keyboard.dismiss()}
+          ListFooterComponent={withFooter(moreExist,error)}
+
         />
-      )}
+      
     </>
   );
 };
