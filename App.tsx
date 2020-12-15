@@ -1,25 +1,18 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * Generated with the TypeScript template
- * https://github.com/react-native-community/react-native-template-typescript
- *
- * @format
- */
-
+import { ApolloProvider } from '@apollo/client';
 import React from 'react';
-import { SafeAreaView, Text, StatusBar } from 'react-native';
+import {  rickyClient } from './src/graphql';
+import { NavigationContainer } from '@react-navigation/native';
+import { MainStackNavigator } from './src/Navigator/MainStackNavigator';
 
-const App = () => {
+
+const mainApp = () => {
   return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <Text>Ricky and morty ;) !</Text>
-      </SafeAreaView>
-    </>
+    <ApolloProvider client={rickyClient}>
+    <NavigationContainer>
+      <MainStackNavigator />
+    </NavigationContainer>
+    </ApolloProvider>
   );
 };
 
-export default App;
+export default mainApp;
