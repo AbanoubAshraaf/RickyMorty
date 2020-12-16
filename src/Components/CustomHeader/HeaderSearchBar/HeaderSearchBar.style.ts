@@ -33,6 +33,7 @@ const styles = StyleSheet.create({
     color: colors.mainThemeBackgroundColor,
     marginHorizontal: 10,
     textAlign: 'left',
+    height:40
   },
 });
 export default styles;
