@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import { Animated, TextInput } from 'react-native';
 import styles from './HeaderSearchBar.style';
-import { colors } from '../../../appStyles';
+import { colors } from '../../../AppStyles';
 import debounce from 'lodash.debounce';
 import { IHeaderSearchBarProps } from './HeaderSearchBar.interface';
 
