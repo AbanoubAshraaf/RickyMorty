@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android": "react-native run-android",
+    "android": "cd android && ./gradlew clean && cd .. && react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
@@ -11,7 +11,9 @@
     "lint:fix": "eslint . --ext .js,.ts,.tsx --fix",
     "format": "prettier --write \"./**/*.{ts,tsx,js,json,md}\"",
     "check:format": "prettier --list-different \"./**/*.{ts,tsx,js,json,md}\"",
-    "pre-push": "yarn format"
+    "pre-push": "yarn format",
+    "pods:install": "npx pod-install ./ios"
+
   },
   "dependencies": {
     "@apollo/client": "^3.3.6",
