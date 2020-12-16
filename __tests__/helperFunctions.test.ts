@@ -14,6 +14,7 @@ describe('mergeNewData testing', () => {
   const dummyData: ICharactersResult = { id: 1, name: 'ricky', image: '' };
   const incoming: IQueryCharactersResponse = { results: [dummyData, dummyData] };
 
+  
   it('should avoid deplucate results ', () => {
     expect(mergeNewData(existing, incoming)).toEqual({ results: [dummyData], ids: [1] });
   });
