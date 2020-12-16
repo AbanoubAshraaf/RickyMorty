@@ -4,7 +4,7 @@ import { Text, View } from 'react-native';
 import styles from './HeaderController.style';
 import { IHeaderControllerProps } from './HeaderController.interface';
 import RickyIcon from '../../RickyIcon/RickyIcon';
-import { icons } from '../../../appStyles';
+import { icons } from '../../../AppStyles';
 
 export const HeaderController = ({
   searchableHeader,

@@ -4,7 +4,7 @@ import { Text } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 import { IEspoide } from '../CharacterDetails.interface';
 import EpisodeListItem from './EpisodeListItem';
-import withFooter from '../../../hoc/withFooter';
+import withFooter from '../../../Hoc/withFooter';
 
 const EpisodeList = ({ episodes, loading, error }: IEpisodeListProps) => {
   const renderEpisodeItem = ({ item }: { item: IEspoide }) => <EpisodeListItem {...item} />;
