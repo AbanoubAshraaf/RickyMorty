@@ -8,6 +8,7 @@ const mainApp = () => {
   return (
     <ApolloProvider client={rickyClient}>
       <NavigationContainer>
+        
         <MainStackNavigator />
       </NavigationContainer>
     </ApolloProvider>
