@@ -5,7 +5,7 @@ import RickyMortyCharacter from '../RickyMortyCharacter/RickyMortyCharacter';
 const withRenderCharacter = (onCharacterPress: (item: ICharactersResult) => void) => ({
   item,
 }: {
-  item: ICharactersResult
+  item: ICharactersResult;
 }) => <RickyMortyCharacter {...item} onCharacterPress={onCharacterPress} />;
 
 export default withRenderCharacter;

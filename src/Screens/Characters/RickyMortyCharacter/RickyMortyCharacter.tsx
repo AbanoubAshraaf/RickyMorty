@@ -5,7 +5,10 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 import { IRickyMortyCharacterProps } from '../Characters.interface';
 
 const RickyMortyCharacter = ({ image, id, name, onCharacterPress }: IRickyMortyCharacterProps) => (
-  <TouchableOpacity style={styles.container} onPress={() => onCharacterPress({ id, image, name })}>
+  <TouchableOpacity
+    testID="characterContainer"
+    style={styles.container}
+    onPress={() => onCharacterPress({ id, image, name })}>
     <Image source={{ uri: image }} style={styles.characterImage} resizeMode="contain" />
     <Text style={styles.title}>{name}</Text>
   </TouchableOpacity>
