@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { colors } from '../../../appStyles';
+import { colors } from '../../../AppStyles';
 
 const styles = StyleSheet.create({
   searchableContainer: (animatedValue: any) => {
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     color: colors.mainThemeBackgroundColor,
     marginHorizontal: 10,
     textAlign: 'left',
-    height:40
+    height: 40,
   },
 });
 export default styles;

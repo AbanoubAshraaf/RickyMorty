@@ -1,11 +1,11 @@
 import { StyleSheet } from 'react-native';
-import { colors } from '../../appStyles';
+import { colors } from '../../AppStyles';
 const styles = StyleSheet.create({
   loaderContainer: {
     marginVertical: 10,
     paddingVertical: 10,
     paddingHorizontal: 10,
-    shadowColor: "#000",
+    shadowColor: '#000',
     shadowOffset: {
       width: 0,
       height: 2,

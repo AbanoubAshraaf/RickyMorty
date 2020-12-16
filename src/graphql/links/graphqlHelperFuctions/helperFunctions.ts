@@ -1,4 +1,4 @@
-import { IExistingState, IQueryCharactersResponse } from '../GraphQl.interface';
+import { IExistingState, IQueryCharactersResponse } from '../../GraphQl.interface';
 
 export const mergeNewData = (existing: IExistingState, incoming: IQueryCharactersResponse) => {
   if (incoming) {
