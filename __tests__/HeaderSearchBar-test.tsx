@@ -1,6 +1,6 @@
 // @flow
 import * as React from 'react';
-import { render, fireEvent, waitForElementToBeRemoved } from '@testing-library/react-native';
+import { render, fireEvent } from '@testing-library/react-native';
 import HeaderSearchBar from '../src/Components/CustomHeader/HeaderSearchBar';
 import * as sinon from 'sinon';
 
