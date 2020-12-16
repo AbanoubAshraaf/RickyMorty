@@ -2,8 +2,8 @@ import {
   ICharactersResult,
   IExistingState,
   IQueryCharactersResponse,
-} from '../../GraphQl.interface';
-import { mergeNewData } from './helperFunctions';
+} from '../src/graphql/GraphQl.interface';
+import { mergeNewData } from '../src/graphql/links/helperFunctions';
 
 describe('mergeNewData testing', () => {
   let existing: IExistingState = { results: [], ids: [] };
