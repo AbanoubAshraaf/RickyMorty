@@ -3,7 +3,7 @@
 ## Contents
 
 - [Get Started](#-get-started)
-  - [Technology used](#-Technology-used)
+  - [Used Technology](#-Used-Technology)
   - [Donwload From GitHub](#-download-from-bitbucket)
   - [Insall all dependencies](#-insall-all-dependencies)
   - [Install ios PODs](#-Install-ios-PODs)
@@ -13,7 +13,7 @@
 
 ## Get started:
 
-## Technology used
+## Used Technology
 
 - [React Navigation 5](https://reactnavigation.org/)
 - [TypeScript](https://reactnative.dev/docs/typescript)
@@ -22,7 +22,7 @@
 - [Unit Testing](https://reactnative.dev/docs/testing-overview)
 - [Sentry](https://docs.sentry.io/platforms/react-native/)
 
-## Icon that used for gnerate App Icon for IOS & android  
+## Icon I used for generate App Icon for IOS & android  
 
 - [Ricky icon](https://cdn.domestika.org/c_fill,dpr_1.0,h_1200,t_base_params.format_jpg,w_1200/v1546529981/project-covers/000/458/388/458388-original.jpg?1546529981)
 
