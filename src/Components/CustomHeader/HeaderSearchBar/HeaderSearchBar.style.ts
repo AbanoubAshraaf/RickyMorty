@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { colors } from '../../../AppStyles';
+import { colors } from '../../../appStyles';
 
 const styles = StyleSheet.create({
   searchableContainer: (animatedValue: any) => {

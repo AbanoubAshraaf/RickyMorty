@@ -3,11 +3,11 @@ import React, { useState } from 'react';
 import { FlatList, Keyboard } from 'react-native';
 import { charactersGql } from '../../graphql';
 import { CustomHeader } from '../../Components/CustomHeader';
-import { colors } from '../../AppStyles';
+import { colors } from '../../appStyles';
 import withRenderCharacter from './hoc/withRenderCharacter';
 import { ICharactersProps, IRickyMortyCharacterProps } from './Characters.interface';
 import { ICharactersResult } from '../../graphql/GraphQl.interface';
-import withFooter from '../../Hoc/withFooter';
+import withFooter from '../../hoc/withFooter';
 
 const singlePageLength = 20;
 

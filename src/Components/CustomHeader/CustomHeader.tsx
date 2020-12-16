@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import { StatusBar, Animated, SafeAreaView } from 'react-native';
 import styles from './CustomHeader.style';
-import { colors } from '../../AppStyles';
+import { colors } from '../../appStyles';
 import { ICustomHeaderProps } from './CustomHeader.interface';
 import HeaderSearchBar from './HeaderSearchBar';
 import HeaderController from './HeaderController';
