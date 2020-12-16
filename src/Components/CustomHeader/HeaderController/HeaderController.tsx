@@ -3,7 +3,7 @@ import React from 'react';
 import { Text, View } from 'react-native';
 import styles from './HeaderController.style';
 import { IHeaderControllerProps } from './HeaderController.interface';
-import RickyIcon from '../../RickyIcon/RickyIcon';
+import CustomIcon from '../../CustomIcon/CustomIcon';
 import { icons } from '../../../AppStyles';
 
 export const HeaderController = ({
@@ -17,7 +17,7 @@ export const HeaderController = ({
 }: IHeaderControllerProps) => {
   return (
     <View style={styles.container}>
-      <RickyIcon
+      <CustomIcon
         enable={backIcon}
         source={icons.backArrow2}
         onPress={() => {
@@ -26,7 +26,7 @@ export const HeaderController = ({
         containerStyle={{ transform: [{ rotate: '180deg' }] }}
       />
       <Text style={[styles.title, titleStyle]}>{title}</Text>
-      <RickyIcon
+      <CustomIcon
         enable={searchIcon}
         source={icons.search}
         onPress={() => {

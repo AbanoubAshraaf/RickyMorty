@@ -1,6 +1,6 @@
 import { ImageStyle, ViewStyle } from 'react-native';
 
-export interface IRickyIconProps {
+export interface ICustomIconProps {
   source: number;
   onPress: () => void;
   iconStyle?: ImageStyle;
