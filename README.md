@@ -10,6 +10,7 @@
   - [Run the application](#-Run-the-application)
 - [Available Package Scripts](#-Available-Package-Scripts)
 
+**Note: Please don't forget check my branches and commit to see how I built this repo from scractch**
 
 ## Get started:
 
