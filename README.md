@@ -3,7 +3,7 @@
 ## Contents
 
 - [Get Started](#-get-started)
-  - [Used Technology](#-Used-Technology)
+  - [Used Technologies](#-Used-Technologies)
   - [Donwload From GitHub](#-download-from-bitbucket)
   - [Insall all dependencies](#-insall-all-dependencies)
   - [Install ios PODs](#-Install-ios-PODs)
@@ -13,7 +13,7 @@
 
 ## Get started:
 
-## Used Technology
+## Used Technologies
 
 - [React Navigation 5](https://reactnavigation.org/)
 - [TypeScript](https://reactnative.dev/docs/typescript)
