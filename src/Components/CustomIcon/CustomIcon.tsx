@@ -1,9 +1,9 @@
 import React from 'react';
 import { TouchableHighlight, Image } from 'react-native';
-import styles from './RickyIcon.style';
-import { IRickyIconProps } from './RickyIcon.interface';
+import styles from './CustomIcon.style';
+import { ICustomIconProps } from './CustomIcon.interface';
 
-const RickyIcon = ({ source, onPress, iconStyle, enable, containerStyle }: IRickyIconProps) => {
+const CustomIcon = ({ source, onPress, iconStyle, enable, containerStyle }: ICustomIconProps) => {
   if (!enable) {
     return null;
   }
@@ -16,4 +16,4 @@ const RickyIcon = ({ source, onPress, iconStyle, enable, containerStyle }: IRick
     </TouchableHighlight>
   );
 };
-export default RickyIcon;
+export default CustomIcon;
