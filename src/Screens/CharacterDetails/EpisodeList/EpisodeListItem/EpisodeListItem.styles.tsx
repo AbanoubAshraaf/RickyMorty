@@ -5,14 +5,14 @@ const styles = StyleSheet.create({
   container: {
     paddingVertical: 10,
     paddingHorizontal: 10,
-    shadowColor: "#000",
+    shadowColor: '#000',
     shadowOffset: {
       width: 0,
       height: 1,
     },
     shadowOpacity: 0.22,
     shadowRadius: 2.22,
-            elevation: 3,
+    elevation: 3,
     backgroundColor: colors.mainThemeBackgroundColor,
     borderRadius: 10,
     marginVertical: 10,
