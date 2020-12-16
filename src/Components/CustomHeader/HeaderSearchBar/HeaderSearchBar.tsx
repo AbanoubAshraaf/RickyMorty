@@ -20,6 +20,7 @@ export const HeaderSearchBar = ({
   return (
     <Animated.View style={styles.searchableContainer(animatedValue)}>
       <TextInput
+        testID="searchBarTextInput"
         style={styles.textInput}
         placeholder="Search"
         placeholderTextColor={colors.mainTextForegroundColor}
