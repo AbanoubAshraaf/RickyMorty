@@ -4,5 +4,5 @@ import { IEspoide } from "../CharacterDetails.interface";
 export interface IEpisodeListProps {
   episodes: IEspoide[];
   loading: boolean;
-  error: ApolloError;
+  error: ApolloError | undefined;
 }
