@@ -2,13 +2,13 @@
 
 ## Contents
 
-- [Get Started](#-get-started)
+  - [Get Started](#-get-started)
   - [Used Technologies](#-Used-Technologies)
   - [Donwload From GitHub](#-download-from-bitbucket)
   - [Insall all dependencies](#-insall-all-dependencies)
   - [Install ios PODs](#-Install-ios-PODs)
   - [Run the application](#-Run-the-application)
-- [Available Package Scripts](#-Available-Package-Scripts)
+  - [Available Package Scripts](#-Available-Package-Scripts)
 
 **Note: Please don't forget check my branches and commit to see how I built this repo from scractch**
 
@@ -16,12 +16,14 @@
 
 ## Used Technologies
 
-- [React Navigation 5](https://reactnavigation.org/)
+- [React Navigation](https://reactnavigation.org/docs/getting-started)
 - [TypeScript](https://reactnative.dev/docs/typescript)
 - [GraphQL (Apollo client).](https://www.apollographql.com/docs/react/)
 - [React Hooks](https://reactjs.org/docs/hooks-overview.html)
+- [Deep Linking](https://reactnavigation.org/docs/deep-linking/)
 - [Unit Testing](https://reactnative.dev/docs/testing-overview)
 - [Sentry](https://docs.sentry.io/platforms/react-native/)
+
 
 ## Icon I used for generate App Icon for IOS & android
 
@@ -41,12 +43,17 @@ $ cd RickyMorty
 
 ```bash
 $ yarn install
+# or
+$ npm install
+
 ```
 
 ### Install ios PODs
 
 ```bash
 $ yarn pods:install
+# or
+$ npm run pods:install
 # or
 $ cd platforms/mobile/ios => pod install => cd ..
 ```
@@ -57,10 +64,13 @@ $ cd platforms/mobile/ios => pod install => cd ..
 
 # for android
 $ yarn android
+# or
+$ npm run android
 
 # for ios
 $ yarn ios
-
+# or
+$ npm run ios
 ```
 
 ## Available Package Scripts
@@ -68,19 +78,23 @@ $ yarn ios
 **Example**
 
 ```bash
-$ yarn ios
+$ yarn checkDeepLinkingIOS
+# or
+$ npm run checkDeepLinkingIOS
 ```
 
-| Name           | Description                                                               |
-| -------------- | ------------------------------------------------------------------------- |
-| `andorid`      | Run on andorid emulator > the andorid emulator must be pre-starte         |
-| `ios`          | Run on IOS emulator                                                       |
-| `format`       | Prettify code using prettier                                              |
-| `check:format` | Prints the filenames of files that are different from Prettier formatting |
-| `lint`         | Run `eslint`                                                              |
-| `lint:fix`     | Auto fix eslint`                                                          |
-| `pods:install` | Install ios pods                                                          |
-| `test`         | run test cases                                                            |
+| Name                       | Description                                                               |
+| -------------------------  | ------------------------------------------------------------------------- |
+| `andorid`                  | Run on andorid emulator > the andorid emulator must be pre-starte         |
+| `ios`                      | Run on IOS emulator                                                       |
+| `format`                   | Prettify code using prettier                                              |
+| `check:format`             | Prints the filenames of files that are different from Prettier formatting |
+| `lint`                     | Run `eslint`                                                              |
+| `lint:fix`                 | Auto fix eslint`                                                          |
+| `pods:install`             | Install ios pods                                                          |
+| `test`                     | run test cases                                                            |
+| `checkDeepLinkingAndroid`  | test deep linking android                                                 |
+| `checkDeepLinkingIOS`      | test deep linking ios                                                     |
 
 ## File Structure
 

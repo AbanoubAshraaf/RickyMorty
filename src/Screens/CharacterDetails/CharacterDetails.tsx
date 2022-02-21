@@ -6,19 +6,25 @@ import {
   ICharacterDetailsProps,
   IRickyMortyCharcterDetails,
 } from "./CharacterDetails.interface";
-import { Image, ScrollView, Text, View } from "react-native";
+import { Image, Text, View } from "react-native";
 import styles from "./CharacterDetails.styles";
 import EpisodeList from "./EpisodeList";
+import withFooter from "../../hoc/withFooter";
 
 const CharacterDetails = ({ navigation, route }: ICharacterDetailsProps) => {
-  const { id, name, image } = route.params;
+  const { id } = route.params;
   const { loading, error, data } = useQuery(characterDetailsGql, {
     variables: {
       id,
     },
   });
 
-  const character: IRickyMortyCharcterDetails = data ? data.character : {};
+  const character: IRickyMortyCharcterDetails = (data && data.character) || {};
+  const { episode = [], gender, species, image, name } = character;
+
+  if (error && !loading) {
+    withFooter(loading, error);
+  }
 
   return (
     <>
@@ -30,14 +36,10 @@ const CharacterDetails = ({ navigation, route }: ICharacterDetailsProps) => {
           resizeMode="contain"
         />
         <Text style={styles.infoText}>
-          {character.gender || ""} / {character.species || ""}
+          {gender} / {species}
         </Text>
         <Text style={styles.title}>{name}</Text>
-        <EpisodeList
-          episodes={character.episode || []}
-          loading={loading}
-          error={error}
-        />
+        <EpisodeList episodes={episode} loading={loading} error={error} />
       </View>
     </>
   );

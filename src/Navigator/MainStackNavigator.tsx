@@ -23,3 +23,19 @@ export const MainStackNavigator = () => {
     </RootStack.Navigator>
   );
 };
+
+const config = {
+  screens: {
+    characterDetails: {
+      path: "characters/:id",
+      parse: {
+        id: (id) => `${id}`,
+      },
+    },
+  },
+};
+
+export const linking = {
+  prefixes: ["rickandmorty-app://"],
+  config,
+};
