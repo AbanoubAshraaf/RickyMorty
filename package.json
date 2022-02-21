@@ -12,7 +12,9 @@
     "format": "prettier --write \"./**/*.{ts,tsx,js,json,md}\"",
     "check:format": "prettier --list-different \"./**/*.{ts,tsx,js,json,md}\"",
     "pre-push": "yarn format",
-    "pods:install": "npx pod-install ./ios"
+    "pods:install": "npx pod-install ./ios",
+    "checkDeepLinkingAndroid":"npx uri-scheme open 'rickandmorty-app://characters/5' --android",
+    "checkDeepLinkingIOS":"xcrun simctl openurl booted 'rickandmorty-app://characters/2'"
   },
   "dependencies": {
     "@apollo/client": "^3.3.6",

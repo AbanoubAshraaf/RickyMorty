@@ -6,8 +6,8 @@ export interface IAuthLink {
 
 export interface ICharactersResult {
   id: number;
-  name: string;
-  image: ImageSourcePropType;
+  name?: string;
+  image?: ImageSourcePropType;
 }
 export interface IInfo {
   count: number;
