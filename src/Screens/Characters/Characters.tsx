@@ -16,7 +16,7 @@ const singlePageLength = 20;
 
 const Characters = ({ navigation }: ICharactersProps) => {
   const [name, setName] = useState("");
-  const { data = {}, fetchMore, error } = useQuery(charactersGql, {
+  const { data = {}, fetchMore, error, loading } = useQuery(charactersGql, {
     variables: {
       page: 1,
       name: name,
@@ -68,7 +68,7 @@ const Characters = ({ navigation }: ICharactersProps) => {
         onEndReachedThreshold={0.5}
         onEndReached={() => loadMoreCharacters()}
         onTouchStart={() => Keyboard.dismiss()}
-        ListFooterComponent={withFooter(moreExist, error)}
+        ListFooterComponent={withFooter(moreExist || loading, error)}
       />
     </>
   );
