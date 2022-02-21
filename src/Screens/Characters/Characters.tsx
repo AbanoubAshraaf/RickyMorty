@@ -41,11 +41,9 @@ const Characters = ({ navigation }: ICharactersProps) => {
     }
   };
 
-  const onCharacterPress = ({ name, id, image }: IRickyMortyCharacterProps) => {
+  const onCharacterPress = ({ id }: IRickyMortyCharacterProps) => {
     navigation.navigate("characterDetails", {
       id,
-      name,
-      image,
     });
   };
 
