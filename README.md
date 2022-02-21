@@ -78,7 +78,9 @@ $ npm run ios
 **Example**
 
 ```bash
-$ yarn ios
+$ yarn checkDeepLinkingIOS
+# or
+$ npm run checkDeepLinkingIOS
 ```
 
 | Name                       | Description                                                               |
