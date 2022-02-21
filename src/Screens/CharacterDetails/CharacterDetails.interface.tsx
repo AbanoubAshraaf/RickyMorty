@@ -1,11 +1,11 @@
-import { StackNavigationProp } from '@react-navigation/stack';
-import { ImageSourcePropType } from 'react-native';
-import { ICharactersResult } from '../../graphql/GraphQl.interface';
-import { RootStackParamList } from '../../Navigator/MainStackNavigator';
+import { StackNavigationProp } from "@react-navigation/stack";
+import { ImageSourcePropType } from "react-native";
+import { ICharactersResult } from "../../graphql/GraphQl.interface";
+import { RootStackParamList } from "../../Navigator/MainStackNavigator";
 
 type CharacterDetailsScreenNavigationProp = StackNavigationProp<
   RootStackParamList,
-  'characterDetails'
+  "characterDetails"
 >;
 
 export interface ICharacterDetailsProps {
@@ -14,8 +14,8 @@ export interface ICharacterDetailsProps {
 }
 
 enum gender {
-  male = 'male',
-  female = 'female',
+  male = "male",
+  female = "female",
 }
 
 export interface IEspoide {

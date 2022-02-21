@@ -1,8 +1,8 @@
-import React from 'react';
-import { ActivityIndicator, Text, View } from 'react-native';
-import { colors } from '../../appStyles';
-import { IActivityIndicator } from './ActivityIndicator.interface';
-import styles from './ActivityIndicator.styles';
+import React from "react";
+import { ActivityIndicator, View } from "react-native";
+import { colors } from "../../appStyles";
+import { IActivityIndicator } from "./ActivityIndicator.interface";
+import styles from "./ActivityIndicator.styles";
 
 const ActivitIndicator = ({ loading }: IActivityIndicator) => {
   if (!loading) return null;

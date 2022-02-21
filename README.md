@@ -23,7 +23,7 @@
 - [Unit Testing](https://reactnative.dev/docs/testing-overview)
 - [Sentry](https://docs.sentry.io/platforms/react-native/)
 
-## Icon I used for generate App Icon for IOS & android  
+## Icon I used for generate App Icon for IOS & android
 
 - [Ricky icon](https://cdn.domestika.org/c_fill,dpr_1.0,h_1200,t_base_params.format_jpg,w_1200/v1546529981/project-covers/000/458/388/458388-original.jpg?1546529981)
 
@@ -61,7 +61,7 @@ $ yarn android
 # for ios
 $ yarn ios
 
-``` 
+```
 
 ## Available Package Scripts
 
@@ -71,17 +71,16 @@ $ yarn ios
 $ yarn ios
 ```
 
-| Name           | Description                                                                                                                                                      |
-| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `andorid`      | Run on andorid emulator > the andorid emulator must be pre-starte                                                                                                |
-| `ios`          | Run on IOS emulator                                                                                                                                              |
-| `format`       | Prettify code using prettier                                                                                                                                     |
-| `check:format` | Prints the filenames of files that are different from Prettier formatting                                                                                        |
-| `lint`         | Run `eslint`                                                                                                                                                     |
-| `lint:fix`     | Auto fix eslint`                                                                                                                                                 |
-| `pods:install` | Install ios pods                                                                                                                                                 |
-| `test` | run test cases                                                                                                                                                 |
-
+| Name           | Description                                                               |
+| -------------- | ------------------------------------------------------------------------- |
+| `andorid`      | Run on andorid emulator > the andorid emulator must be pre-starte         |
+| `ios`          | Run on IOS emulator                                                       |
+| `format`       | Prettify code using prettier                                              |
+| `check:format` | Prints the filenames of files that are different from Prettier formatting |
+| `lint`         | Run `eslint`                                                              |
+| `lint:fix`     | Auto fix eslint`                                                          |
+| `pods:install` | Install ios pods                                                          |
+| `test`         | run test cases                                                            |
 
 ## File Structure
 
@@ -100,4 +99,3 @@ $ yarn ios
         │   └── index.ts
  * /
 ```
-

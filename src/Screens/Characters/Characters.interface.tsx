@@ -1,8 +1,11 @@
-import { StackNavigationProp } from '@react-navigation/stack';
-import { ICharactersResult } from '../../graphql/GraphQl.interface';
-import { RootStackParamList } from '../../Navigator/MainStackNavigator';
+import { StackNavigationProp } from "@react-navigation/stack";
+import { ICharactersResult } from "../../graphql/GraphQl.interface";
+import { RootStackParamList } from "../../Navigator/MainStackNavigator";
 
-type CharctersScreenNavigationProp = StackNavigationProp<RootStackParamList, 'characters'>;
+type CharctersScreenNavigationProp = StackNavigationProp<
+  RootStackParamList,
+  "characters"
+>;
 
 export interface ICharactersProps {
   navigation: CharctersScreenNavigationProp;

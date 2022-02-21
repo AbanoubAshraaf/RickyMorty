@@ -1,30 +1,37 @@
-import { useQuery } from '@apollo/client';
-import React, { useState } from 'react';
-import { FlatList, Keyboard } from 'react-native';
-import { charactersGql } from '../../graphql';
-import { CustomHeader } from '../../Components/CustomHeader';
-import { colors } from '../../appStyles';
-import withRenderCharacter from './hoc/withRenderCharacter';
-import { ICharactersProps, IRickyMortyCharacterProps } from './Characters.interface';
-import { ICharactersResult } from '../../graphql/GraphQl.interface';
-import withFooter from '../../hoc/withFooter';
+import { useQuery } from "@apollo/client";
+import React, { useState } from "react";
+import { FlatList, Keyboard } from "react-native";
+import { charactersGql } from "../../graphql";
+import { CustomHeader } from "../../Components/CustomHeader";
+import { colors } from "../../appStyles";
+import withRenderCharacter from "./hoc/withRenderCharacter";
+import {
+  ICharactersProps,
+  IRickyMortyCharacterProps,
+} from "./Characters.interface";
+import { ICharactersResult } from "../../graphql/GraphQl.interface";
+import withFooter from "../../hoc/withFooter";
 
 const singlePageLength = 20;
 
 const Characters = ({ navigation }: ICharactersProps) => {
-  const [name, setName] = useState('');
-  const { data, fetchMore, refetch, error } = useQuery(charactersGql, {
+  const [name, setName] = useState("");
+  const { data, fetchMore, error } = useQuery(charactersGql, {
     variables: {
       page: 1,
       name: name,
     },
-    fetchPolicy: 'cache-and-network',
+    fetchPolicy: "cache-and-network",
   });
 
-  const results: ICharactersResult[] = data && data.characters && data.characters.results;
+  const results: ICharactersResult[] =
+    data && data.characters && data.characters.results;
   const resultsLength: number = results && results.length;
   const count: number =
-    data && data.characters && data.characters.info && data.characters.info.count;
+    data &&
+    data.characters &&
+    data.characters.info &&
+    data.characters.info.count;
   const moreExist = resultsLength && resultsLength < count;
   const loadMoreCharacters = () => {
     if (moreExist) {
@@ -38,7 +45,7 @@ const Characters = ({ navigation }: ICharactersProps) => {
   };
 
   const onCharacterPress = ({ name, id, image }: IRickyMortyCharacterProps) => {
-    navigation.navigate('characterDetails', {
+    navigation.navigate("characterDetails", {
       id,
       name,
       image,

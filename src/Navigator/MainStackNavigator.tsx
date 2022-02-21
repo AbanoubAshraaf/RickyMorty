@@ -1,13 +1,16 @@
-import React from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
-import { NavigationAction } from '@react-navigation/native';
-import Characters from '../Screens/Characters';
-import { ICharactersResult } from '../graphql/GraphQl.interface';
-import CharacterDetails from '../Screens/CharacterDetails';
+import React from "react";
+import { createStackNavigator } from "@react-navigation/stack";
+import { NavigationAction } from "@react-navigation/native";
+import Characters from "../Screens/Characters";
+import { ICharactersResult } from "../graphql/GraphQl.interface";
+import CharacterDetails from "../Screens/CharacterDetails";
 
 export type RootStackParamList = {
   characters: { navigation: NavigationAction };
-  characterDetails: { navigation: NavigationAction; route: { params: ICharactersResult } };
+  characterDetails: {
+    navigation: NavigationAction;
+    route: { params: ICharactersResult };
+  };
 };
 
 const RootStack = createStackNavigator<RootStackParamList>();

@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import { Text, View } from 'react-native';
-import styles from './HeaderController.style';
-import { IHeaderControllerProps } from './HeaderController.interface';
-import CustomIcon from '../../CustomIcon/CustomIcon';
-import { icons } from '../../../appStyles';
+import { Text, View } from "react-native";
+import styles from "./HeaderController.style";
+import { IHeaderControllerProps } from "./HeaderController.interface";
+import CustomIcon from "../../CustomIcon/CustomIcon";
+import { icons } from "../../../appStyles";
 
 export const HeaderController = ({
   searchableHeader,
@@ -23,7 +23,7 @@ export const HeaderController = ({
         onPress={() => {
           navigation.goBack();
         }}
-        containerStyle={{ transform: [{ rotate: '180deg' }] }}
+        containerStyle={{ transform: [{ rotate: "180deg" }] }}
       />
       <Text style={[styles.title, titleStyle]}>{title}</Text>
       <CustomIcon
@@ -32,7 +32,7 @@ export const HeaderController = ({
         onPress={() => {
           setSearchableHeader(!searchableHeader);
         }}
-        containerStyle={{ transform: [{ rotate: '90deg' }] }}
+        containerStyle={{ transform: [{ rotate: "90deg" }] }}
       />
     </View>
   );

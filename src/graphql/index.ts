@@ -1,2 +1,2 @@
-export * from './GraphQl';
-export * from './queries';
+export * from "./GraphQl";
+export * from "./queries";

@@ -1,10 +1,10 @@
-import { StyleSheet } from 'react-native';
-import { colors } from '../../appStyles';
+import { StyleSheet } from "react-native";
+import { colors } from "../../appStyles";
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
     padding: 10,
   },
   errorText: {

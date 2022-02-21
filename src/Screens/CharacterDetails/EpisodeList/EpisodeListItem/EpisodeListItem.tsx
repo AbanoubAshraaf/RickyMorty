@@ -1,7 +1,7 @@
-import React from 'react';
-import { Text, View } from 'react-native';
-import { IEspoide } from '../../CharacterDetails.interface';
-import styles from './EpisodeListItem.styles';
+import React from "react";
+import { Text, View } from "react-native";
+import { IEspoide } from "../../CharacterDetails.interface";
+import styles from "./EpisodeListItem.styles";
 
 const EpisodeListItem = ({ name, air_date, id }: IEspoide) => {
   return (

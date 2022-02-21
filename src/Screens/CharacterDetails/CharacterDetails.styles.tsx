@@ -1,18 +1,18 @@
-import { StyleSheet } from 'react-native';
-import { colors } from '../../appStyles';
+import { StyleSheet } from "react-native";
+import { colors } from "../../appStyles";
 
 const styles = StyleSheet.create({
   container: {
     padding: 20,
     marginVertical: 8,
     marginHorizontal: 16,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
   title: {
     fontSize: 25,
     marginTop: 5,
-    textAlign: 'center',
+    textAlign: "center",
   },
   characterImage: {
     width: 150,
