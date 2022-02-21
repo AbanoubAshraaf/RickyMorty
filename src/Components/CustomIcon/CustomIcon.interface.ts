@@ -4,6 +4,6 @@ export interface ICustomIconProps {
   source: number;
   onPress: () => void;
   iconStyle?: ImageStyle;
-  enable: boolean;
+  enable?: boolean;
   containerStyle?: ViewStyle;
 }
