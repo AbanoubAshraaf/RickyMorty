@@ -93,8 +93,8 @@ $ npm run checkDeepLinkingIOS
 | `lint:fix`                 | Auto fix eslint`                                                          |
 | `pods:install`             | Install ios pods                                                          |
 | `test`                     | run test cases                                                            |
-| `checkDeepLinkingAndroid`  | test deep linking android                                                 |
-| `checkDeepLinkingIOS`      | test deep linking ios                                                     |
+| `checkDeepLinkingIOS`      | DL-IOS will open app direct on chacter details screen with character id 2 |
+| `checkDeepLinkingAndroid`  | DL-android will open the app on chacter details screen with character id 5|
 
 ## File Structure
 
