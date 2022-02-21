@@ -6,7 +6,7 @@ import {
   ICharacterDetailsProps,
   IRickyMortyCharcterDetails,
 } from "./CharacterDetails.interface";
-import { Image, ScrollView, Text } from "react-native";
+import { Image, ScrollView, Text, View } from "react-native";
 import styles from "./CharacterDetails.styles";
 import EpisodeList from "./EpisodeList";
 
@@ -23,7 +23,7 @@ const CharacterDetails = ({ navigation, route }: ICharacterDetailsProps) => {
   return (
     <>
       <CustomHeader title={name} backIcon={true} navigation={navigation} />
-      <ScrollView contentContainerStyle={styles.container}>
+      <View style={styles.container}>
         <Image
           source={{ uri: image }}
           style={styles.characterImage}
@@ -38,7 +38,7 @@ const CharacterDetails = ({ navigation, route }: ICharacterDetailsProps) => {
           loading={loading}
           error={error}
         />
-      </ScrollView>
+      </View>
     </>
   );
 };

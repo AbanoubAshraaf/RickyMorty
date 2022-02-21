@@ -16,7 +16,7 @@ const singlePageLength = 20;
 
 const Characters = ({ navigation }: ICharactersProps) => {
   const [name, setName] = useState("");
-  const { data, fetchMore, error } = useQuery(charactersGql, {
+  const { data = {}, fetchMore, error, loading } = useQuery(charactersGql, {
     variables: {
       page: 1,
       name: name,
@@ -24,14 +24,11 @@ const Characters = ({ navigation }: ICharactersProps) => {
     fetchPolicy: "cache-and-network",
   });
 
-  const results: ICharactersResult[] =
-    data && data.characters && data.characters.results;
+  const { characters = {} } = data;
+
+  const { results }: { results: ICharactersResult[] } = characters;
   const resultsLength: number = results && results.length;
-  const count: number =
-    data &&
-    data.characters &&
-    data.characters.info &&
-    data.characters.info.count;
+  const count: number = characters.info && characters.info.count;
   const moreExist = resultsLength && resultsLength < count;
   const loadMoreCharacters = () => {
     if (moreExist) {
@@ -61,7 +58,6 @@ const Characters = ({ navigation }: ICharactersProps) => {
       <CustomHeader
         title="Ricky and morty"
         searchIcon={true}
-        setName={setName}
         onChaneName={onChangeName}
       />
       <FlatList
@@ -72,7 +68,7 @@ const Characters = ({ navigation }: ICharactersProps) => {
         onEndReachedThreshold={0.5}
         onEndReached={() => loadMoreCharacters()}
         onTouchStart={() => Keyboard.dismiss()}
-        ListFooterComponent={withFooter(moreExist, error)}
+        ListFooterComponent={withFooter(moreExist || loading, error)}
       />
     </>
   );
