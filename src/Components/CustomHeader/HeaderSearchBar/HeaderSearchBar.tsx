@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import { Animated, TextInput } from 'react-native';
-import styles from './HeaderSearchBar.style';
-import { colors } from '../../../appStyles';
-import debounce from 'lodash.debounce';
-import { IHeaderSearchBarProps } from './HeaderSearchBar.interface';
+import { Animated, TextInput } from "react-native";
+import styles from "./HeaderSearchBar.style";
+import { colors } from "../../../appStyles";
+import debounce from "lodash.debounce";
+import { IHeaderSearchBarProps } from "./HeaderSearchBar.interface";
 
 export const HeaderSearchBar = ({
   searchableHeader,
   onChaneName,
   animatedValue,
 }: IHeaderSearchBarProps) => {
-  const [searchValue, setSearchValue] = useState('');
+  const [searchValue, setSearchValue] = useState("");
 
   const debouncedOnChange = debounce(onChaneName, 500);
   if (!searchableHeader || !onChaneName) {

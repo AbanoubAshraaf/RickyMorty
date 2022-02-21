@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
-import { StatusBar, Animated, SafeAreaView } from 'react-native';
-import styles from './CustomHeader.style';
-import { colors } from '../../appStyles';
-import { ICustomHeaderProps } from './CustomHeader.interface';
-import HeaderSearchBar from './HeaderSearchBar';
-import HeaderController from './HeaderController';
+import { StatusBar, Animated, SafeAreaView } from "react-native";
+import styles from "./CustomHeader.style";
+import { colors } from "../../appStyles";
+import { ICustomHeaderProps } from "./CustomHeader.interface";
+import HeaderSearchBar from "./HeaderSearchBar";
+import HeaderController from "./HeaderController";
 
 export const CustomHeader = ({
   titleStyle,
@@ -30,6 +30,7 @@ export const CustomHeader = ({
     Animated.timing(animatedValue, {
       toValue: value,
       duration: 200,
+      useNativeDriver: false,
     }).start();
   };
 

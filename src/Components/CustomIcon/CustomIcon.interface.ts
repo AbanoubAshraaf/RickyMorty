@@ -1,4 +1,4 @@
-import { ImageStyle, ViewStyle } from 'react-native';
+import { ImageStyle, ViewStyle } from "react-native";
 
 export interface ICustomIconProps {
   source: number;

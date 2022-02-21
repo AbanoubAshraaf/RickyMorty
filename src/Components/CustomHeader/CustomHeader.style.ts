@@ -1,5 +1,5 @@
-import { StyleSheet } from 'react-native';
-import { colors } from '../../appStyles';
+import { StyleSheet } from "react-native";
+import { colors } from "../../appStyles";
 
 const styles = StyleSheet.create({
   safeAreaViewStyle: {

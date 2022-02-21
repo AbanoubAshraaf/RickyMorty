@@ -1,11 +1,11 @@
-import { StyleSheet } from 'react-native';
-import { colors } from '../../../../appStyles';
+import { StyleSheet } from "react-native";
+import { colors } from "../../../../appStyles";
 
 const styles = StyleSheet.create({
   container: {
     paddingVertical: 10,
     paddingHorizontal: 10,
-    shadowColor: '#000',
+    shadowColor: "#000",
     shadowOffset: {
       width: 0,
       height: 1,
@@ -20,8 +20,8 @@ const styles = StyleSheet.create({
   titleText: {
     color: colors.mainTextForegroundColor,
     fontSize: 15,
-    alignSelf: 'center',
-    fontWeight: 'bold',
+    alignSelf: "center",
+    fontWeight: "bold",
   },
   keyText: {
     color: colors.mainTextColor,

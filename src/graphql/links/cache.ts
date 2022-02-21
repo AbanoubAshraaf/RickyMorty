@@ -1,6 +1,10 @@
-import { InMemoryCache } from '@apollo/client';
-import { ICharactersResult, IExistingState, IQueryCharactersResponse } from '../GraphQl.interface';
-import { mergeNewData } from './helperFunctions';
+import { InMemoryCache } from "@apollo/client";
+import {
+  ICharactersResult,
+  IExistingState,
+  IQueryCharactersResponse,
+} from "../GraphQl.interface";
+import { mergeNewData } from "./helperFunctions";
 
 const initalState: IExistingState = { results: [], ids: [] };
 export const rickyCache = new InMemoryCache({
@@ -11,7 +15,7 @@ export const rickyCache = new InMemoryCache({
     Query: {
       fields: {
         characters: {
-          keyArgs: ['filter'],
+          keyArgs: ["filter"],
           merge(existing = initalState, incoming: IQueryCharactersResponse) {
             const mergedData: IExistingState = mergeNewData(existing, incoming);
             return mergedData;

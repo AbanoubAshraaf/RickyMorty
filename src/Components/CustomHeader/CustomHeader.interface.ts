@@ -1,6 +1,6 @@
-import { TextStyle } from 'react-native';
-import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamList } from '../../Navigator/MainStackNavigator';
+import { TextStyle } from "react-native";
+import { StackNavigationProp } from "@react-navigation/stack";
+import { RootStackParamList } from "../../Navigator/MainStackNavigator";
 
 export interface ICustomHeaderProps {
   title: string;

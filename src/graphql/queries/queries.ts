@@ -1,4 +1,4 @@
-import { gql } from '@apollo/client';
+import { gql } from "@apollo/client";
 
 export const charactersGql = gql`
   query characters($page: Int!, $name: String) {

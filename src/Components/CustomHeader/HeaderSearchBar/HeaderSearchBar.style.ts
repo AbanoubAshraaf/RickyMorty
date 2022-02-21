@@ -1,5 +1,5 @@
-import { StyleSheet } from 'react-native';
-import { colors } from '../../../appStyles';
+import { StyleSheet } from "react-native";
+import { colors } from "../../../appStyles";
 
 const styles = StyleSheet.create({
   searchableContainer: (animatedValue: any) => {
@@ -15,13 +15,13 @@ const styles = StyleSheet.create({
       borderWidth: 0,
       borderBottomLeftRadius: 35,
       borderBottomRightRadius: 35,
-      backgroundColor: '#4657ae',
+      backgroundColor: "#4657ae",
       marginHorizontal: 15,
       marginTop: 5,
       marginBottom: 10,
       borderRadius: 25,
-      flexDirection: 'row',
-      alignItems: 'center',
+      flexDirection: "row",
+      alignItems: "center",
       paddingRight: 10,
     };
   },
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     letterSpacing: 0,
     color: colors.mainThemeBackgroundColor,
     marginHorizontal: 10,
-    textAlign: 'left',
+    textAlign: "left",
     height: 40,
   },
 });
